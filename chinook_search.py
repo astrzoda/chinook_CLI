@@ -30,7 +30,7 @@ def make_query(args):
         )  # To list all tracks:
         # query = select(tracks)
         if args.artist:
-            # To list all albums for given artist:
+            # To list all tracks for given artist:
             query = query.where(artists.c.Name == args.artist)
         if args.limit:
             query = query.limit(args.limit)
